@@ -1,0 +1,12 @@
+torch
+torchvision
+torchaudio
+nnunetv2
+streamlit
+jupyterlab
+matplotlib
+SimpleITK
+nibabel
+TotalSegmentator
+scipy
+numpy

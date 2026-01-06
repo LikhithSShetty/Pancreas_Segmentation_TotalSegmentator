@@ -1,0 +1,48 @@
+graph TD
+    subgraph "1. Data Preparation"
+        A["<span style='color:#6c5ce7;'>Start: Input Abdominal CT Scan</span>"]
+        A1["<span style='color:#74b9ff;'>Preprocess CT Scan: Resampling and Normalization</span>"]
+    end
+
+    subgraph "2. AI Segmentation"
+        B["<span style='color:#00cec9;'>Run TotalSegmentator Model</span>"]
+        C["<span style='color:#fab1a0;'>Generate Initial Pancreas Mask</span>"]
+        C1["<span style='color:#fdcb6e;'>Save Segmentation Output to Disk</span>"]
+    end
+
+    subgraph "3. Quality & Performance Analysis"
+        D["<span style='color:#e17055;'>Quantitative Analysis</span>"]
+        E["<span style='color:#d63031;'>Calculate Dice, Volume, and Intensity</span>"]
+        F["<span style='color:#0984e3;'>Visual Analysis in 3D Slicer</span>"]
+        G["<span style='color:#6c5ce7;'>Compare AI Mask to Ground Truth</span>"]
+    end
+
+    subgraph "4. Error Correction Loop"
+        H["<span style='color:#00b894;'>Is Segmentation Accuracy Sufficient?</span>"]
+        I["<span style='color:#fd79a8;'>Identify Error Source</span>"]
+        J["<span style='color:#e84393;'>Adjust Model Parameters</span>"]
+        K["<span style='color:#2d3436;'>Re-run TotalSegmentator</span>"]
+    end
+
+    subgraph "5. Final Output"
+        L["<span style='color:#636e72;'>Final High-Quality Pancreas Mask</span>"]
+        M["<span style='color:#b2bec3;'>Generate Research Report and Visuals</span>"]
+        N["<span style='color:#ffeaa7;'>End</span>"]
+    end
+
+    A --> A1;
+    A1 --> B;
+    B --> C;
+    C --> C1;
+    C1 --> D;
+    C1 --> F;
+    D --> E;
+    F --> G;
+    E & G --> H;
+    H -- Yes --> L;
+    H -- No --> I;
+    I --> J;
+    J --> K;
+    K --> C;
+    L --> M;
+    M --> N;
