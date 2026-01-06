@@ -1,4 +1,4 @@
-# Pancreatic Tumor Detection Using Deep Learning
+# Pancreatic Segmentation and Detection Using Deep Learning
 
 ## 📋 Table of Contents
 
