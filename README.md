@@ -21,9 +21,8 @@
 
 **Title:** Automated Pancreas Segmentation in Abdominal CT Using Deep Learning
 
-**Alternative Title:** Exploring Deep Learning for Pancreas Segmentation: TotalSegmentator's Role in Clinical CT Analysis
 
-This project implements an automated system for detecting and segmenting pancreatic tissue and tumors in abdominal CT scans using state-of-the-art deep learning models. It combines two powerful frameworks:
+This project implements an automated system for detecting and segmenting pancreatic tissue in abdominal CT scans using deep learning models. It combines two powerful frameworks:
 
 1. **nnU-Net v2.6.2** - A self-configuring deep learning framework for medical image segmentation
 2. **TotalSegmentator** - A comprehensive tool for whole-body CT segmentation
@@ -31,7 +30,6 @@ This project implements an automated system for detecting and segmenting pancrea
 ### Key Capabilities
 
 ✅ Automated pancreas detection and segmentation  
-✅ Tumor/cancer detection within pancreatic tissue  
 ✅ High accuracy with Dice scores of 0.85-0.94  
 ✅ Fast inference (~18 seconds on CPU, ~10-30 seconds on GPU)  
 ✅ 3D visualization of results  
@@ -80,7 +78,6 @@ This project automates the detection and segmentation process, enabling:
 - ⚡ **Faster Diagnosis**: Reduces analysis time from hours to seconds
 - 🎯 **Consistent Results**: Eliminates inter-observer variability
 - 📊 **Quantitative Analysis**: Provides objective measurements for treatment planning
-- 🔍 **Early Detection**: Helps identify small tumors that might be missed visually
 - 📈 **Scalability**: Can process large datasets for research and screening
 
 ### Research Objectives
@@ -306,23 +303,6 @@ Pancreas research/
 │
 └── totalseg_accurate_output/              # TotalSegmentator outputs
     └── (multi-organ segmentation results)
-```
-
-### Key Files Explained
-
-| File/Folder                                   | Purpose                        | When to Use                    |
-| --------------------------------------------- | ------------------------------ | ------------------------------ |
-| `README.md`                                   | Complete project documentation | Start here for overview        |
-| `Setup_Complete_Summary.md`                   | Quick setup checklist          | Initial environment setup      |
-| `Pancreatic_Tumor_Detection_Guide.markdown`   | Step-by-step tutorial          | Learning the workflow          |
-| `nnUNet_Setup_Test.ipynb`                     | Interactive testing notebook   | Running inference, experiments |
-| `nnunet_env/`                                 | Isolated Python environment    | All project operations         |
-| `nnUNet_data/nnUNet_raw/Dataset007_Pancreas/` | Training/test dataset          | Model input data               |
-| `nnUNet_data/nnUNet_results/`                 | Pretrained model weights       | Required for inference         |
-| `inference_input/`                            | Your new CT scans              | Place files to analyze         |
-| `inference_output/`                           | Segmentation results           | Find processed outputs         |
-
----
 
 ## 🚀 Setup & Installation
 
